@@ -1,0 +1,71 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.container {
+    max-width: 960px;
+}
+
+.pricing-header {
+    max-width: 700px;
+}
+
+.card-deck .card {
+    min-width: 200px;
+    height: 400px;
+}
+
+.card-body li { /* Adds line spacing for card descriptions */
+    padding: 8px 0;
+}
+
+
+.card-header {
+    border-bottom: 4px solid #086495;
+
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.img-responsive { /* Measurements for KPC Logo on top */
+    height: 90px;
+    width: 150px;
+}
+
+.font-weight-normal { /* For the title on the cards */
+    text-transform: uppercase;
+}
+
+.btn-primary { /* Sign up Button Style */
+    background: #086495;
+    color: #ffffff;
+    border: none;
+
+}
+
+.btn-primary:hover {
+    background: #0a7ab6;
+    color: #ffffff;
+
+}
+
+/* Color Changes for the Social Icons */
+.fa-facebook-square {
+    color: #3b5998;
+}
+
+.fa-twitter-square {
+    color:#1DA1F2;
+}
+
+.fa-google-plus-square {
+    color:#DB4437;
+}
