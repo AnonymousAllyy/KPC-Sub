@@ -180,13 +180,8 @@ label {
     height: 35px;
 }
 
-#state {
+select {
     width: 50%;
-    height: 32px;
-}
-
-#months {
-    width 50%;
     height: 32px;
 }
 
@@ -209,5 +204,6 @@ a{
     font: 300 14px 'Roboto', sans-serif;
     color: white;
 }
+
 
 
