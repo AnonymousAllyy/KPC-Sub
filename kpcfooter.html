@@ -1,11 +1,42 @@
-
-
 <html>
     <head>
         <title> KPC Footer </title>
 
         <style>
 
+ html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
+}
+.content {
+  flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: 20px;
+}
+.footer {
+  flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font: 16px Sans-Serif;
+}
+
+footer {
+    font: 300 14px 'Roboto', sans-serif;
+     background: #086495;
+    text-align: center;
+    color: white;
+}
+
+/*
             footer {
                 font: 300 14px 'Roboto', sans-serif;
                 background: #086495;
@@ -17,6 +48,7 @@
                 text-align: center;
                 color: white;
             }
+*/
             a{
                 /* text-decoration: none; */
                 font: 300 14px 'Roboto', sans-serif;
@@ -28,12 +60,16 @@
     </head>
 
 
+
+
+
     <body>
 
-        <footer>&copy; 2018 <a href="KPCNEWS.COM">KPCNEWS.COM</a> | 102 N. Main St. Kendallville, IN</footer>
+        <footer class="footer">&copy; 2018 <a href="KPCNEWS.COM">KPCNEWS.COM</a> | 102 N. Main St. Kendallville, IN</footer>
 
 
     </body>
+
 </html>
 
 
