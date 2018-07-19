@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
     <head>
         <title> KPC Footer </title>
 
@@ -8,37 +8,15 @@
   height: 100%;
 }
 body {
+      margin: 0;
+  font: 16px Sans-Serif;
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
-}
-.content {
-  flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
-  padding: 20px;
-}
-.footer {
-  flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
-  padding: 20px;
-}
-
-* {
-  box-sizing: border-box;
-}
-body {
-  margin: 0;
-  font: 16px Sans-Serif;
+  height: 100vh;
 }
 
 footer {
-    font: 300 14px 'Roboto', sans-serif;
-     background: #086495;
-    text-align: center;
-    color: white;
-}
-
-/*
-            footer {
-                font: 300 14px 'Roboto', sans-serif;
+       font: 300 14px 'Roboto', sans-serif;
                 background: #086495;
                 bottom: 0;
                 left: 0;
@@ -48,8 +26,8 @@ footer {
                 text-align: center;
                 color: white;
             }
-*/
-            a{
+
+  a{
                 /* text-decoration: none; */
                 font: 300 14px 'Roboto', sans-serif;
                 color: white;
@@ -60,9 +38,6 @@ footer {
     </head>
 
 
-
-
-
     <body>
 
         <footer class="footer">&copy; 2018 <a href="KPCNEWS.COM">KPCNEWS.COM</a> | 102 N. Main St. Kendallville, IN</footer>
@@ -70,8 +45,86 @@ footer {
 
     </body>
 
+</html> -->
+
+<html>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* must declare 0 margins on everything, also for main layout components
+use padding, not vertical margins (top and bottom) to add spacing, else
+those margins get added to total height and your footer gets pushed down
+a bit more, creating vertical scroll bars in the browser */
+
+html, body, #wrap {
+    height: 100%;
+}
+
+body > #wrap {
+    height: auto;
+    min-height: 100%;
+}
+
+#main {
+    padding-bottom: 50px;  /* must be same height as the footer */
+}
+
+#footer {
+    position: relative;
+    margin-top: -50px;  /* negative value of footer height */
+    height: 50px;
+    clear: both;
+    background: #086495;
+    text-align: center;
+    font: 300 15px 'Roboto', sans-serif;
+    color: white;
+}
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+/* CLEAR FIX */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}
+/* Hides from IE-mac */
+* html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
+}
+/* End hide from IE-mac */
+    </style>
+
+    <body>
+
+      <div id="wrap">
+    <div id="main" class="clearfix">
+        <!-- non-footer content -->
+    </div>
+</div>
+
+<div id="footer">
+    <!-- footer content -->
+    <br/>
+    &copy; 2018 <a href="KPCNEWS.COM">KPCNEWS.COM</a> | 102 N. Main St. Kendallville, IN
+</div>
+
+    </body>
+
 </html>
-
-
 
 

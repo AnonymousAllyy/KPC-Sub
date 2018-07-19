@@ -3,6 +3,11 @@
 html {
     font-size: 12px;
     font: Roboto, sans-serif;
+height: 100%;
+}
+
+body {
+    background-color: whitesmoke;
 }
 
 @media (min-width: 768px) {
@@ -64,7 +69,7 @@ html {
 
 .card-deck .card {
     min-width: 200px;
-    height: 400px;
+    height: 370px;
 }
 
 .card-body li { /* Adds line spacing for card descriptions */
@@ -188,22 +193,61 @@ select {
 
 /*Footer Styles*/
 
-footer {
-    font: 300 14px 'Roboto', sans-serif;
+html, body, #wrap {
+    height: 100%;
+}
+
+body > #wrap {
+    height: auto;
+    min-height: 100%;
+}
+
+#main {
+    padding-bottom: 50px;  /* must be same height as the footer */
+}
+
+#footer {
+    position: relative;
+    margin-top: -50px;  /* negative value of footer height */
+    height: 50px;
+    clear: both;
     background: #086495;
-    bottom: 0;
-    left: 0;
-    padding: 20px 0;
-    position: fixed;
-    right: 0;
     text-align: center;
+    font: 300 15px 'Roboto', sans-serif;
     color: white;
 }
 
-a{
-    font: 300 14px 'Roboto', sans-serif;
-    color: white;
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+/* CLEAR FIX */
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }
+.clearfix {
+    display: inline-block;
+}
+/* Hides from IE-mac */
+* html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
+}
+/* End hide from IE-mac */
 
 
 
+
+
+
+.header {
+    font-weight: 300;
+
+}
